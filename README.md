@@ -1,17 +1,17 @@
-# storytelling-basic-map-template-js
+# storytelling-text-and-legend-map-template-js
 
-A storytelling template for publishing an ArcGIS webmap to a general audience. The template lets the map do most of the talking: its simple design features map, title, sub-title, and retractable legend.
+This storytelling template enables users to place a webmap into a viewer, and is useful when you need to provide a few more words than just a heading. A side panel provides ample space for a legend and scrollable text.This template also supports multiple webmaps. Users click on a series of tabs to sequentially view the thematic maps. Each map is shown with a text description and map legend. If the user zooms into one map and then switches theme, the new map is automatically shown at a matching scale and extent.
 
-This template is part of the ArcGIS Online template gallery. These templates can be accessed from the ArcGIS Online's map viewer Share window or from the Web Application Templates group. When accessed from the map viewer the templates can be published as a hosted application or you can download the template ZIP file to install on your web server.
+This template is part of the ArcGIS.com template gallery. These templates can be accessed from the ArcGIS.com map viewer Share window or from the Web Application Templates group. When accessed from the map viewer the templates can be published as a hosted application or you can download the template ZIP file to install on your web server.
 
-[View live app here](http://storymaps.esri.com/templates/basic/)
+[View live app here](http://storymaps.esri.com/templates/sidepanel/)
 
-![App](https://raw.github.com/Esri/storytelling-basic-map-template-js/master/images/storytelling-basic-map-template-js.png)
+![App](https://raw.github.com/Esri/storytelling-text-and-legend-map-template-js/master/images/storytelling-text-and-legend-map-template-js.png)
 
 ## Features
-* A simple map viewer for an ArcGIS Online webmap.
-* Includes a banner section to display a title and subtitle.
-* Retractable legend.
+* Supports a single webmap or multiple webmaps with tabs.
+* Supports time enabled maps.
+* Legend and description can be hidden.
 
 ## Instructions
 
@@ -35,9 +35,14 @@ Now let's configure the application to use a different ArcGIS Online group, titl
 2. Open the index.html file in a text editor. You can edit this file to set the following application properties:
     - **webmap**: unique identifier for the ArcGIS Online map.
     - **title**: if not specified the ArcGIS.com map's title is used.
-    - **subtitle**: if not specified the ArcGIS.com web map's summary is used.
+    - **subtitle**: if not specified the ArcGIS.com webmap's summary is used.
+    - **description**: if not specified the ArcGIS.com webmap's description is used (Note: this will only change if there is only one webmap in the app).
+    - **tabTitles**: if multiple webmaps are used, replace the webmaps title in the tabs.
+    - **displayDescription**: choose if description is displayed with map.
+    - **displayLegend**: choose if legend is displayed with map.
+    - **loop**: choose if time enabled maps are used, choose if time animation is repeated.
+    - **syncMaps**: choose if multiple maps are synced across scale and location.
     - **bingMapsKey**: if the map uses data from Bing Maps, enter your Bing Maps Key.
-    - **legend**: Choose if legend is displayed with map.
 3. Save the file then test your application and note that it now displays your application and if specified your custom title and subtitle.
 
 #### Personalize the application
@@ -89,4 +94,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt](https://raw.github.com/Esri/storytelling-basic-map-template-js/master/license.txt) file.
+A copy of the license is available in the repository's [license.txt](https://raw.github.com/Esri/storytelling-text-and-legend-map-template-js/master/license.txt) file.
