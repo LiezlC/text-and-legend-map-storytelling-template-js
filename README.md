@@ -1,4 +1,4 @@
-# storytelling-text-and-legend-map-template-js
+# text-and-legend-map-storytelling-template-js
 
 This storytelling template enables users to place a webmap into a viewer, and is useful when you need to provide a few more words than just a heading. A side panel provides ample space for a legend and scrollable text.This template also supports multiple webmaps. Users click on a series of tabs to sequentially view the thematic maps. Each map is shown with a text description and map legend. If the user zooms into one map and then switches theme, the new map is automatically shown at a matching scale and extent.
 
@@ -6,7 +6,7 @@ This template is part of the ArcGIS.com template gallery. These templates can be
 
 [View live app here](http://storymaps.esri.com/templates/sidepanel/)
 
-![App](https://raw.github.com/Esri/storytelling-text-and-legend-map-template-js/master/images/storytelling-text-and-legend-map-template-js.png)
+![App](https://raw.github.com/Esri/text-and-legend-map-storytelling-template-js/master/images/storytelling-text-and-legend-map-template-js.png)
 
 ## Features
 * Supports a single webmap or multiple webmaps with tabs.
@@ -94,4 +94,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt](https://raw.github.com/Esri/storytelling-text-and-legend-map-template-js/master/license.txt) file.
+A copy of the license is available in the repository's [license.txt](https://raw.github.com/Esri/text-and-legend-map-storytelling-template-js/master/license.txt) file.
