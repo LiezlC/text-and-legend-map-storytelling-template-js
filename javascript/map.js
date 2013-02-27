@@ -475,6 +475,13 @@ function mapLoaded(){
 					dojo.style(dojo.byId("banner"),"height","165px");
 				}
 			}
+			$(".esriSimpleSliderIncrementButton").addClass("zoomButtonIn");
+          	$(".zoomButtonIn").each(function(i){
+          		$(this).after("<div class='esriSimpleSliderIncrementButton initExtentButton'><img style='margin-top:5px' src='images/home.png'></div>");
+				$(".initExtentButton").click(function(){
+					_maps[i].setExtent(_maps[i]._mapParams.extent);
+				});
+			});
 			dojo.forEach(_maps,function(map,i){
 				if (i != 0){
 					dojo.fadeOut({
