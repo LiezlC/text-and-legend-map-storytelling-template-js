@@ -241,6 +241,14 @@ g,v{
 	cursor:pointer;
 }
 
+.maximize{
+	display:none;
+}
+
+.zoomTo{
+	color:#444;
+}
+
 .dijitRuleMark{
 	border: 1px solid #848484;
 }
