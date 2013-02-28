@@ -331,7 +331,7 @@ function initUI(layers,index,map) {
 			  				datePattern = 'yyyy G'
 			  				break;
 						case 'esriTimeUnitsDecades':
-			  				datePattern = 'yyyy'
+			  				datePattern = i18n.viewer.datePatterns.yearPattern
 			  				break;
 			 			case 'esriTimeUnitsYears':
 			  				datePattern = 'MMMM yyyy'
@@ -340,28 +340,28 @@ function initUI(layers,index,map) {
 			  				datePattern = 'MMMM d, yyyy'
 			  				break;
 						case 'esriTimeUnitsDays':
-			  				datePattern = 'MMMM d, yyyy'
+			  				datePattern = i18n.viewer.datePatterns.datePattern
 			  				break;
 						case 'esriTimeUnitsHours':
-			  				datePattern = 'h:m:s.SSS a'
+			  				datePattern = i18n.viewer.datePatterns.hourTimePattern
 			  				break;
 						case 'esriTimeUnitsMilliseconds':
-			  				datePattern = 'h:m:s.SSS a'
+			  				datePattern = i18n.viewer.datePatterns.millisecondTimePattern
 			  				break;
 						case 'esriTimeUnitsMinutes':
-			  				datePattern = 'h:m:s.SSS a'
+			  				datePattern = i18n.viewer.datePatterns.minuteTimePattern
 			 				break;
 						case 'esriTimeUnitsMonths':
 			  				datePattern = 'MMMM d, y'
 			  				break;
 						case 'esriTimeUnitsSeconds':
-			  				datePattern = 'h:m:s.SSS a'
+			  				datePattern = i18n.viewer.datePatterns.secondTimePattern
 			  				break;
 		  			}
 		   			timeString = formatDate(timeExtent.startTime,datePattern) + " to " + formatDate(timeExtent.endTime,datePattern);
 		  		}
 		  		else{
-					timeString = formatDate(timeExtent.endTime,'MMMM d,yyyy');
+					timeString = formatDate(timeExtent.endTime,i18n.viewer.datePatterns.datePattern);
 		  		}
 
 			dojo.byId('timeDisplay').innerHTML = timeString;
