@@ -257,9 +257,9 @@ g,v{
 	z-index:10;
 }
 
-.dijitToggleButton, .dijitButton, .dijitDropDownButton, .dijitComboButton{
+/*.dijitToggleButton, .dijitButton, .dijitDropDownButton, .dijitComboButton{
 	display:none;
-}
+}*/
 
 .esriRtl #tabArea{
     padding-left:0;
