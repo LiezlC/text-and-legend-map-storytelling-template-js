@@ -220,7 +220,6 @@ title and subtitle.</li>
 
 </ol>
 
-
 <a href="#top">Top</a>
 <a name="options"></a>
 <h4 class="heading">Specify Map Options</h4>
@@ -452,21 +451,44 @@ ArcGIS.com. </li>
 
 </ol>
 
-<big style="font-weight: bold;">External URLs that cannot
-be modified<small><br>
+<big style="font-weight: bold;">Other external references<small><br>
 
 <br>
 
-</small></big>The application may not function correctly if
-the references below are modified.&nbsp;<br>
+</small></big>The Storytelling Text amd Legend template
+contains an
+external reference to jQuery 1.9.1. jQuery 1.9.1 can be hosted on your
+internal network and references in the template updated to point to
+your internally hosted version. The steps below provide
+instructions&nbsp;to host jQuery 1.9.1 internally and update the
+jQuery reference in the template.<br>
 
 <ol>
 
-  <li><span style="font-weight: bold;">JQuery:&nbsp;</span><span>http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js</span>.
+  <li><a href="http://jquery.com/download/">Download
+jQuery 1.9.1</a> and host it on your internal web server.<span style="font-weight: bold;"></span></li>
+
+  <br>
+
+  <li><span style="font-weight: bold;">Update the
+jQuery reference in the template.</span><span style="font-weight: bold;">&nbsp;</span><span style="font-weight: normal;">In index.html, use a text
+search&nbsp;to find&nbsp;"</span><span style="font-weight: bold;"></span><span>http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js</span><span style="font-weight: normal;">". &nbsp;There should only
+be one instance.&nbsp;</span><span style="font-weight: normal;">Replace the reference with
+your internally hosted jQuery 1.9.1. Be aware you may need to modify
+the
+search and replace text strings to correctly update the references to
+point to your
+hosted jQuery. </span>
+    <pre><br>Search for: <span class="selector">//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js</span><br></pre>
+
+    <span style="font-weight: bold;"></span>
+    <pre>Replace with: <span class="selector">//MyWebServer/MyjQuery/</span><span class="selector">1.9.1/jquery.min.js</span></pre>
+
   </li>
 
 </ol>
 
-<a href="#top">Top</a>
+
+<big style="font-weight: bold;"></big><a href="#top">Top</a>
 </body>
 </html>

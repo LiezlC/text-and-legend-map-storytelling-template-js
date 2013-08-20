@@ -326,7 +326,7 @@ if (_timeProperties[index] != null) {
     });
 
     timeSlider.startup();
-
+    
     $("#timeSliderDiv > table > tbody > tr > td > span").hide();
     dojo.forEach(dojo.query(".timeControl"), function (qry) {
         dojo.style(qry, "display", "block");
