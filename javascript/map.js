@@ -15,6 +15,7 @@ _thumbIndexes = [],
 mapsLoaded = 0,
 mapsReady = false,
 isPlaying = false,
+mapsReadyForAnimation = false,
 cm, mapExtent;
 var configOptions;
 
@@ -154,9 +155,12 @@ mapDeferred.addCallback(function (response) {
     _maps[i] = map;
 
     dojo.connect(map, 'onClick', stopTime);
-    dojo.connect(map, 'onExtentChange', syncExtents)
+    dojo.connect(map, 'onExtentChange', syncExtents);
+     dojo.connect(map, "onUpdateStart", function () {
+        mapsReadyForAnimation = false;
+    });
     dojo.connect(map, "onUpdateEnd", function () {
-        mapLoaded();
+        mapsReadyForAnimation = true;
         playAnimation();
     });
 
@@ -278,8 +282,10 @@ if (_timeProperties[index] != null) {
         dojo.place("<img id='prev' class='timeControl' src='images/prevIcon.png' alt='' onClick='prevTime()'>", timeCon[2], 'last');
         dojo.place("<img id='next' class='timeControl' src='images/nextIcon.png' alt='' onClick='nextTime()'>", timeCon[3], 'last');
 
-        _thumbIndexes[cm] = timeSlider.thumbIndexes
-        waitForLoad();
+        _thumbIndexes[cm] = timeSlider.thumbIndexes;
+        if(!mapsReadyForAnimation){
+            waitForLoad();
+        }
         var timeString;
         if (_timeProperties[cm].timeStopInterval !== undefined) {
             switch (_timeProperties[cm].timeStopInterval.units) {
@@ -355,6 +361,8 @@ if (_timeProperties[index] != null) {
     });
 }
 }
+
+        mapLoaded();
 }
 
 
