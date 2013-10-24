@@ -298,63 +298,6 @@ the left of the title in the application header.</li>
 
 </ol>
 
-<a href="#top">Top</a>
-<a name="addresources"></a>
-<h4 class="heading">Add an overview map</h4>
-
-<p>The <a href="http://help.arcgis.com/EN/webapi/javascript/arcgis/index.html">ArcGIS
-API for JavaScript</a> has several dijits that you can use to add
-additional functionality to the application. Let's look at how to add
-the <a href="http://help.arcgis.com/EN/webapi/javascript/arcgis/help/jsapi_start.htm#jsapi/overviewmap.htm">OverviewMap</a>
-dijit to the application. The OverviewMap dijit shows the current
-extent for the map within the context of a larger area. </p>
-
-<ol>
-
-  <li>Open layout.js in the javascript folder in a text editor
-and add the line in red to the dojo.require section.
-    <pre>dojo.require("esri.map");<br>dojo.require("esri.arcgis.utils");<br>dojo.require("dijit.layout.StackContainer");<br><span class="selector">dojo.require("esri.dijit.OverviewMap");</span>
-    </pre>
-
-  </li>
-
-  <li>The overview map dijit can display in its own window or
-attach to a corner of the map. In this example we are going to attach
-it to the corner of the map. However the map currently has navigation
-displayed which adds an icon to the map corners. Let's turn this off so
-we can display the overview map icon in the corner instead.To turn off
-the navigation images, set the nav value to false in this section of
-code from layout.js.
-    <pre>mapOptions: {<br> slider: true,<br> nav: <span class="selector">false</span>
-    </pre>
-
-  </li>
-
-  <li>Next find the section of code that sets the <code>map</code>
-to <code>response.map</code> and paste the code in red
-beneath that line. This code checks to see if the map is loaded, if it
-is it runs a function that adds the overview map to the application.
-    <pre>map = response.map;<br><span class="selector"><br>if(map.loaded){<br>addOverviewMap();<br>}<br>else{<br>dojo.connect(map,"onLoad",addOverviewMap);<br>}<br></span><br>if (bingMapsKey) {<br></pre>
-
-  </li>
-
-  <li>Now add the <code>addOverviewMap</code>
-function to the very bottom of the layout.js file.
-    <pre>function addOverviewMap() {<br> var overviewMapDijit = new esri.dijit.OverviewMap({<br> map: map,<br> attachTo: "top-right",<br> visible: true<br> });<br> overviewMapDijit.startup();<br>}<br></pre>
-
-    <p>The code above adds an overview map to the upper right
-corner of the map. You can modify this location by specifying one of
-the other options ("top-right","bottom-right","bottom-left"). The
-visible parameter is set to true which expands the overview map when
-the applciation is first displayed. You can use additional parameters
-to modify the color and opacity of the rectangle, set the width and
-height etc. View the API Reference for the <a href="http://help.arcgis.com/EN/webapi/javascript/arcgis/help/jsapi_start.htm#jsapi/overviewmap.htm">OverviewMap</a>
-for more information.</p>
-
-  </li>
-
-</ol>
-
 <h4 class="heading"><a name="Configure_custom_utility_services_and"></a>Configure
 custom utility services and
 other external URLs</h4>

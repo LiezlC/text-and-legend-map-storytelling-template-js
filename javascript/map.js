@@ -233,6 +233,14 @@ map: map,
 scalebarUnit: configOptions.i18n.viewer.main.scaleBarUnits //metric or english
 });
 
+if (configOptions.overviewMap){
+    var overview = new esri.dijit.OverviewMap({
+        map: map,
+        visible: configOptions.showOverviewOnLoad
+    });
+    overview.startup();
+}
+
 var layerInfo = esri.arcgis.utils.getLegendLayers(response);
 
 if (layerInfo.length > 0) {
