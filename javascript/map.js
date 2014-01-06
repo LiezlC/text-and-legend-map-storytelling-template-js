@@ -437,6 +437,7 @@ if (mapsLoaded == configOptions.webmaps.length - 1) {
     mapsLoaded++
     dijit.byId("mainWindow").layout();
     cm = 0;
+    changeMap(0);
     syncExtents();
     esri.hide(dojo.byId("loadingCon"));
 } else {
