@@ -5,21 +5,21 @@
         scaleBarUnits: "metric" //"english (for miles) or "metric" (for km) - don't translate.
       },
       errors:{
-        createMap: "Não foi possível criar o mapa:",
-        general:"Erro",
-        timeout:"Selecione outra opção para iniciar"
+        createMap: "Nelze vytvořit mapu:",
+        general:"Chyba",
+        timeout:"Pro zahájení prosím vyberte jinou záložku."
       },
       loading:{
-        message: "A carregar mapas"
+        message: "Načítám mapy"
       },
       sidePanel:{
         legendHeader: "LEGENDA"
       },
       datePatterns:{
-        datePattern: "d\' de \'MMMM\' de \'yyyy",
-        yearPattern: "yyyy",
-        hourTimePattern: "H",
-        minuteTimePattern: "H:mm",
+        datePattern: "MMMM d, rrrr",
+        yearPattern: "rrrr",
+        hourTimePattern: "h a",
+        minuteTimePattern: "h:mm a",
         secondTimePattern: "H:mm:ss",
         millisecondTimePattern: "H:mm:ss:SSS"
       }

@@ -2,7 +2,8 @@ define(
 [],
 function() {
   var config = {
-    bingMapsKey:"",   
+    bingMapsKey:"Arrzu_Koi7htDRMIwm6kTe0Nqh8FvVdN17blcaJVTEhn87z-tIYJh2LgBNbJS4fv",   
+    units: null,
     helperServices: {
        geometry:{
         url: location.protocol + "//utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer"
@@ -10,10 +11,14 @@ function() {
        printTask: {
         url: location.protocol + "//utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
        },
-       geocode: {
-        url: location.protocol + "//geocode.arcgis.com/arcgis/rest/servcies/World/GeocodeServer"
-       }
-    }
+       elevationSync:{
+         url: location.protocol + "//elevation.arcgis.com/arcgis/rest/services/Tools/ElevationSync/GPServer"
+       },
+       geocode: [{
+        url: location.protocol + "//geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer"
+       }]
+    },
+    queryForOrg: true
 };
   
   // could use a has() test to optionally populate some global
